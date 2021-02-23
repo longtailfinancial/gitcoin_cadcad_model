@@ -23,4 +23,4 @@ colormap>=1.0.3
 easydev>=0.10.1
 holoviews
 pathos
-networkx
+networkx @ git+https://github.com/danlessa/networkx.git@ccf4b9439ff8e3c9abdcc5ad6c6e33c5bdbf4ca

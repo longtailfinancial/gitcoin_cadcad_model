@@ -138,4 +138,3 @@ images/videos/*
 images/*.png
 raw_data/
 scratch/
-networkx/
