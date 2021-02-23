@@ -2,7 +2,7 @@ pandas>=0.25.3
 numpy>=1.19.5
 cadCAD>=0.4.22
 plotly>=4.8.2
-networkx>=2.5
+# networkx>=2.5
 matplotlib>=3.3.3
 opencv-python>=4.4.0.46
 cloudpickle>=1.6.0
@@ -23,3 +23,4 @@ colormap>=1.0.3
 easydev>=0.10.1
 holoviews
 pathos
+networkx
