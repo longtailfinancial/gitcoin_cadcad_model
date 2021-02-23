@@ -1,14 +1,16 @@
 # Gitcoin Analysis
 
-This cadCAD model and notebook series is a collaboration between Gitcoin and BlockScience. A brief table of contents follows to explain the file structure of the various documents produced in this collaboration.
+This cadCAD model and notebook series is a collaboration between Gitcoin, BlockScience, Longtail Financial, and the Token Engineering Academy. Check it out 🦊
 
 ## How to use
 
-1. Install all requirements: `pip install -r requirements.txt`
-2. Change the parameters on `env_config.py` so that it fits your use case.
-3. Run the simulation through `python run_simulation.py` so that we generate the `model/data/simulation_result.pkl.gz` pickled file.
+1. Create and Activate you Python Virtual Environment
+2. Install all requirements: `pip install -r requirements.txt`
+3. Change the parameters on `env_config.py` so that it fits your use case.
+4. See the simulation help documentation for advice on running: `python run_simulation.py --help`
+5. The data results will be pickled `model/data/simulation_result.pkl.gz`.
     * Alternatively, you can just unzip the `model/data/simulation_result.tar.xz` file.
-4. Perform any analytics on the generated data or use one of the available notebooks.
+6. Perform any analytics on the generated data or use one of the available notebooks.
 
 Additionally, there are several options on the `run_simulation.py` script 
 that encapsulates the features on `env_config.py` without needing to modify it.
