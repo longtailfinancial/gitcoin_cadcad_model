@@ -40,38 +40,18 @@ cadCAD configuration scripts for the model and the data to be used on the analys
 
 Quadratic Voting captured the hearts of the web3 space after being re-introduced by the [Radical xChange movement](https://www.radicalxchange.org/). Gitcoin builds on the same principle by leveraging a powerful algorithmic policy called [Quadratic Funding (QF)](https://wtfisqf.com/?grant=&grant=&grant=&grant=&match=1000) to allocate sponsor funds via matching community donations to grants submitted through the Gitcoin Grants program. The purpose of this form of grant matching is to allocate sponsor funding via a community preference signal by capturing not just the depth of donations ($ amount donated), but also the breadth of the donation base (# people who donated). The outcome is that grants that are supported by many people with small donations would receive relatively larger matching than grants supported by few donations of larger amounts. In effect, **Quadratic Funding aims to boost the influence of people over plutocracy.**
 
-## Background information & concepts addressed
+### Development
 
-### What does this cadCAD model do
+Currently, this repository references a custom branch of networkx that implements the sub-graph solver. The branch is here: https://github.com/danlessa/networkx/tree/rewiring-optimizers
 
-In cyber-physical systems like international power grids, global flight networks, or socioeconomic community ecosystems, engineers model simulated replicas of their system, called digital twins. These models help to manage the complexity of systems that have trillions of data points and are constantly in flux. These simulations channel the information into pathways that allow humans to understand what is going on in their ecosystem at a high level, so they can intervene where and as appropriate. (Like hitting a breaker switch when a fault is cleared in a power system).
-
-![img](https://i.imgur.com/kb4Tnh6.jpg)
-
-Digital twins can be considered like a flight simulator, which can be used to run your system through a billion different "tests", varying one parameter at a time, to see what effects may throw your system out of balance. As engineers with public safety in mind, we must understand the tipping points of our systems, and ensure mechanisms are in place to push the system back towards balance if and when they enter their boundary conditions of safety.
-
-## What is cadCAD?
-
-cadCAD (complex adaptive dynamics Computer-Aided Design) is a python based modeling framework for research, validation, and Computer Aided Design of complex systems. Given a model of a complex system, cadCAD can simulate the impact that a set of actions might have on it. This helps users make informed, rigorously tested decisions on how best to modify or interact with the system in order to achieve their goals. cadCAD supports different system modeling approaches and can be easily integrated with common empirical data science workflows. Monte Carlo methods, A/B testing and parameter sweeping features are natively supported and optimized for.
-
-cadCAD links:
-
-* [Introduction to cadCAD](https://community.cadcad.org/t/introduction-to-cadcad/15)
-* [Putting cadCAD in Context](https://community.cadcad.org/t/putting-cadcad-in-context/19)
-* [cadCAD Demos](https://github.com/cadCAD-org/demos)
-
-### Model Reproducibility
-
-In order to reproduce this code, we recommend the researcher to use this [link](https://www.anaconda.com/products/individual) to download Python 3.7. To install the specific version of cadCAD this repository was built with, run the following code:
-
-```bash
-pip install -r requirements.txt
+To use the above and get tests running, I did the following inside of this repository:
 ```
-
-or  
-
-```bash
-conda install --file requirements.txt
+mkdir scratch/
+git clone git@github.com:danlessa/networkx.git
+mv networkx scratch/networkx/
+cp -r scratch/networkx/networkx/ ./
 ```
-
-Check out the cadCAD forum for more information about installing and using cadCAD.
+and then I run tests as
+```
+pytest --ignore scratch/ --ignore networkx/
+```
